@@ -2,32 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nf147.pet.dao.CategoryMapper">
   <resultMap id="BaseResultMap" type="com.nf147.pet.entity.Category">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="LONGVARCHAR" property="name" />
+    <id column="c_id" jdbcType="INTEGER" property="c_id" />
+    <result column="c_name" jdbcType="LONGVARCHAR" property="c_name" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from category
-    where id = #{id,jdbcType=INTEGER}
+    where c_id = #{c_id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.nf147.pet.entity.Category">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
-      JDBC|DB2|MySql|SqlServer
-    </selectKey>
-    insert into category (name)
-    values (#{name,jdbcType=LONGVARCHAR})
+    insert into category (c_id, c_name)
+    values (#{c_id,jdbcType=INTEGER}, #{c_name,jdbcType=LONGVARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.nf147.pet.entity.Category">
     update category
-    set name = #{name,jdbcType=LONGVARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    set c_name = #{c_name,jdbcType=LONGVARCHAR}
+    where c_id = #{c_id,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select id, name
+    select c_id, c_name
     from category
-    where id = #{id,jdbcType=INTEGER}
+    where c_id = #{c_id,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select id, name
+    select c_id, c_name
     from category
   </select>
 </mapper>

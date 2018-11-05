@@ -3,7 +3,7 @@ package com.nf147.pet.entity;
 public class Pet {
     private Integer id;
 
-    private Integer category;
+    private Integer categoryid;
 
     private String name;
 
@@ -15,6 +15,16 @@ public class Pet {
 
     private String photoUrls;
 
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -23,12 +33,12 @@ public class Pet {
         this.id = id;
     }
 
-    public Integer getCategory() {
-        return category;
+    public Integer getCategoryid() {
+        return categoryid;
     }
 
-    public void setCategory(Integer category) {
-        this.category = category;
+    public void setCategoryid(Integer categoryid) {
+        this.categoryid = categoryid;
     }
 
     public String getName() {

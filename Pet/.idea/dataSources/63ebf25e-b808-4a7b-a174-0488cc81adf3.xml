@@ -1332,21 +1332,21 @@
     <table id="336" parent="10" name="pet"/>
     <table id="337" parent="10" name="tag"/>
     <table id="338" parent="10" name="user"/>
-    <column id="339" parent="334" name="id">
+    <column id="339" parent="334" name="c_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="334" name="name">
+    <column id="340" parent="334" name="c_name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="341" parent="334" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>c_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="342" parent="335" name="id">
@@ -1393,7 +1393,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="336" name="category">
+    <column id="350" parent="336" name="categoryid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>

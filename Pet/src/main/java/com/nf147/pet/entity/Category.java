@@ -1,23 +1,23 @@
 package com.nf147.pet.entity;
 
 public class Category {
-    private Integer id;
+    private Integer c_id;
 
-    private String name;
+    private String c_name;
 
-    public Integer getId() {
-        return id;
+    public Integer getC_id() {
+        return c_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setC_id(Integer c_id) {
+        this.c_id = c_id;
     }
 
-    public String getName() {
-        return name;
+    public String getC_name() {
+        return c_name;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setC_name(String c_name) {
+        this.c_name = c_name == null ? null : c_name.trim();
     }
 }

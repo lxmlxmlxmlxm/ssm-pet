@@ -16,15 +16,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.nf147.pet.entity.User">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
-      JDBC|DB2|MySql|SqlServer
-    </selectKey>
-    insert into user (username, firstName, lastName, 
-      email, password, phone, 
-      userStatus)
-    values (#{username,jdbcType=VARCHAR}, #{firstName,jdbcType=VARCHAR}, #{lastName,jdbcType=VARCHAR}, 
-      #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-      #{userStatus,jdbcType=INTEGER})
+    insert into user (id, username, firstName, 
+      lastName, email, password, 
+      phone, userStatus)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{firstName,jdbcType=VARCHAR}, 
+      #{lastName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{userStatus,jdbcType=INTEGER})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.nf147.pet.entity.User">
     update user

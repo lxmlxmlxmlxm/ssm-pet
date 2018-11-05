@@ -8,8 +8,8 @@ create table `order`(
 );
 
 create table Category(
-  id	int primary key  auto_increment,
-  name	text
+  c_id	int primary key  auto_increment,
+  c_name	text
 );
 
 create table `user` (
@@ -24,13 +24,13 @@ create table `user` (
 );
 
 create  table Tag(
-  id	int primary key auto_increment,
-  name	varchar(20)
+  t_id	int primary key auto_increment,
+  t_name	varchar(20)
 );
 
 create table pet(
   id int primary key  auto_increment,
-  category int ,
+  categoryid int ,
   name varchar(20),
   photoUrls text,
   tags int ,
